@@ -1,6 +1,14 @@
+{% extends "base.html" %}
 
-{%for obj in object_list%}
+{% block content %}
 
-<a href="{{obj.get_absolute_url}}">{{obj.title}}<br>
+	{%for obj in object_list%}	
 
-{%endfor%}
+		{% include './snippets/card.html' with instance=obj %}
+
+	<a href="{{obj.get_absolute_url}}">{{obj.title}}<br>
+
+	{%endfor%}
+
+
+{% endblock %}

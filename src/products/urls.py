@@ -5,5 +5,5 @@ from .views import ProductListView, product_list_view,ProductDetailView,product_
 
 urlpatterns = [
     path('', ProductListView.as_view()),
-    re_path('(?P<slug>[\w-]+)/', ProductDetailSlugView.as_view()),
+    re_path('(?P<slug>[\w-]+)/', ProductDetailSlugView.as_view(), name= 'detail'),
 ]
